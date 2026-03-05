@@ -14,6 +14,7 @@ function App() {
       <Companies />
       <Categories />
       <Banner />
+      <LatestJobs />
       <Footer />
     </div>
   )
