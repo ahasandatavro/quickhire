@@ -2,6 +2,9 @@ import Hero from './components/Hero'
 import Companies from './components/Companies'
 import Categories from './components/Categories'
 import Banner from './components/Banner'
+import FeaturedJobs from './components/FeaturedJobs'
+import LatestJobs from './components/LatestJobs'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -11,6 +14,7 @@ function App() {
       <Companies />
       <Categories />
       <Banner />
+      <Footer />
     </div>
   )
 }
