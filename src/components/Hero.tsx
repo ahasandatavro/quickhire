@@ -1,6 +1,7 @@
 import heroPattern from '../assets/Hero/hero_pattern.png';
 import heroPerson from '../assets/Hero/hero_person.png';
 import textLine from '../assets/Hero/text_line.png';
+import logoImg from '../assets/logo/logo.png';
 
 export default function Hero() {
   return (
@@ -17,27 +18,27 @@ export default function Hero() {
     >
       {/* Navigation */}
       <nav className="flex items-center justify-between px-6 md:px-12 py-5 w-full max-w-[1440px] mx-auto shrink-0">
-        <div className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-full bg-[#26A4FF] flex items-center justify-center text-white font-bold text-lg">
-            Q
+        <div className="flex items-center gap-10">
+          <div className="flex items-center gap-2">
+            <img src={logoImg} alt="QuickHire logo" className="h-8 w-8 object-contain" />
+            <span className="font-clash font-semibold text-[#25324B] text-[24px] leading-none">QuickHire</span>
           </div>
-          <span className="font-semibold text-[#25324B] text-xl">QuickHire</span>
-        </div>
-        <div className="hidden md:flex items-center gap-8">
-          <a href="#find-jobs" className="text-[#25324B] hover:text-[#26A4FF] transition-colors">
-            Find Jobs
-          </a>
-          <a href="#companies" className="text-[#25324B] hover:text-[#26A4FF] transition-colors">
-            Browse Companies
-          </a>
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#find-jobs" className="font-epilogue text-[16px] text-[#25324B] hover:text-[#26A4FF] transition-colors">
+              Find Jobs
+            </a>
+            <a href="#companies" className="font-epilogue text-[16px] text-[#25324B] hover:text-[#26A4FF] transition-colors">
+              Browse Companies
+            </a>
+          </div>
         </div>
         <div className="flex items-center gap-4">
-          <a href="#login" className="text-[#25324B] hover:text-[#26A4FF] transition-colors">
+          <a href="#login" className="font-epilogue text-[16px] text-[#25324B] hover:text-[#26A4FF] transition-colors">
             Login
           </a>
           <a
             href="#signup"
-            className="px-5 py-2.5 rounded-md text-white font-medium transition-opacity hover:opacity-90"
+            className="px-5 py-2.5  text-white font-epilogue font-medium text-[16px] transition-opacity hover:opacity-90"
             style={{ backgroundColor: '#4640DE' }}
           >
             Sign Up
