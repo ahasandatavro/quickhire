@@ -2,22 +2,22 @@ import heroPattern from '../assets/Hero/hero_pattern.png';
 import heroPerson from '../assets/Hero/hero_person.png';
 import textLine from '../assets/Hero/text_line.png';
 import logoImg from '../assets/logo/logo.png';
+import { FiMenu } from 'react-icons/fi';
 
 export default function Hero() {
   return (
     <section
-      className="relative h-[794px] bg-[#F8F8FD] overflow-hidden flex flex-col overflow-hidden"
+      className="relative bg-[#F8F8FD] overflow-hidden flex flex-col lg:h-[794px]"
       style={{
         backgroundColor: '#F8F8FD',
-        height: '794px',
         backgroundImage: `url(${heroPattern})`,
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right center',
+        backgroundPosition: 'right top',
         backgroundSize: 'auto 100%',
       }}
     >
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-6 md:px-12 py-5 w-full max-w-[1440px] mx-auto shrink-0">
+      <nav className="flex items-center justify-between px-4 md:px-12 py-4 md:py-5 w-full max-w-[1440px] mx-auto shrink-0">
         <div className="flex items-center gap-10">
           <div className="flex items-center gap-2">
             <img src={logoImg} alt="QuickHire logo" className="h-8 w-8 object-contain" />
@@ -32,7 +32,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <a href="#login" className="font-epilogue text-[16px] text-[#25324B] hover:text-[#26A4FF] transition-colors">
             Login
           </a>
@@ -44,13 +44,20 @@ export default function Hero() {
             Sign Up
           </a>
         </div>
+        <button
+          type="button"
+          className="md:hidden h-10 w-10 rounded-full border border-[#C9CEDB] flex items-center justify-center text-[#25324B]"
+          aria-label="Open menu"
+        >
+          <FiMenu size={20} />
+        </button>
       </nav>
 
       {/* Hero content */}
-      <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 px-6 md:px-12 py-6 lg:py-8 w-full max-w-[1440px] mx-auto flex-1 min-h-0">
+      <div className="relative flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12 px-4 md:px-12 pb-8 lg:pt-8 lg:pb-0 w-full max-w-[1440px] mx-auto flex-1 min-h-0">
         {/* Left: text + search */}
-        <div className="flex-1 max-w-xl lg:max-w-2xl order-2 lg:order-1">
-          <h1 className="font-clash text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#25324B] ">
+        <div className="flex-1 max-w-xl lg:max-w-2xl">
+          <h1 className="font-clash text-[48px] sm:text-[56px] leading-[105%] lg:text-6xl xl:text-7xl font-bold text-[#25324B]">
             <span className="block">Discover</span>
             <span className="block">more than</span>
             <span className="text-[#26A4FF] relative inline-block mt-1">
@@ -58,21 +65,21 @@ export default function Hero() {
               <img
                 src={textLine}
                 alt=""
-                className="absolute -bottom-12 left-0 w-full h-3 lg:h-10 object-contain object-left"
+                className="absolute -bottom-6 lg:-bottom-12 left-0 w-full h-3 lg:h-10 object-contain object-left"
                 aria-hidden
               />
             </span>
           </h1>
-          <p className="font-epilogue mt-14 text-[#25324B]/70 text-base lg:text-lg max-w-lg">
+          <p className="font-epilogue mt-8 lg:mt-14 text-[#25324B]/70 text-[16px] lg:text-lg max-w-lg">
             Great platform for the job seeker that searching for new career heights and passionate about startups.
           </p>
 
           {/* Search bar */}
           <div
-            className="relative z-20 mt-10 lg:mt-12 w-[950px] flex flex-col sm:flex-row gap-5 p-4  bg-white shadow-sm border border-gray-100  sm:items-stretch"
+            className="relative z-20 mt-8 lg:mt-12 w-full md:w-[800px] lg:w-[950px] flex flex-col sm:flex-row gap-0 sm:gap-5 p-4 bg-white shadow-sm border border-gray-100 sm:items-stretch"
             style={{ boxShadow: '0 12px 40px rgba(0,0,0,0.12)' }}
           >
-            <div className="flex-1 flex items-center gap-4 px-6 py-4 text-gray-500 text-base sm:text-lg">
+            <div className="flex-1 flex items-center gap-4 px-2 sm:px-6 py-3 sm:py-4 text-gray-500 text-base">
               <svg className="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -82,7 +89,7 @@ export default function Hero() {
                 className="flex-1 min-w-0 bg-transparent outline-none text-[#25324B] placeholder:text-gray-400"
               />
             </div>
-            <div className="flex-1 sm:max-w-[320px] flex items-center gap-4 px-6 py-4 text-gray-500 text-base sm:text-lg border-t sm:border-t-0 sm:border-l border-gray-100">
+            <div className="flex-1 sm:max-w-[320px] flex items-center gap-4 px-2 sm:px-6 py-3 sm:py-4 text-gray-500 text-base border-t sm:border-t-0 sm:border-l border-gray-200">
               <svg className="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -94,7 +101,7 @@ export default function Hero() {
             </div>
             <button
               type="button"
-              className="px-12 py-4  text-white font-medium text-base sm:text-lg whitespace-nowrap transition-opacity hover:opacity-90"
+              className="mt-3 sm:mt-0 px-6 py-4 text-white font-medium text-[16px] whitespace-nowrap transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#4640DE' }}
             >
               Search my job
@@ -107,17 +114,20 @@ export default function Hero() {
         </div>
 
         {/* Right: person (pattern in section background) */}
-        <div className="flex-1 relative z-10 w-full max-w-md lg:max-w-none order-1 lg:order-2 flex justify-center lg:justify-end items-end min-h-0 overflow-hidden">
+        <div className="hidden lg:flex flex-1 relative z-10 w-full max-w-md lg:max-w-none order-1 lg:order-2 justify-center lg:justify-end items-end min-h-0 overflow-hidden">
           <div className="relative w-full h-full flex items-end justify-center lg:justify-end">
             <img
               src={heroPerson}
               alt="Person pointing towards job opportunities"
-              className="object-contain object-bottom w-[820px] h-[720px]"
+              className="object-contain object-bottom w-[820px] h-[750px] lg:translate-y-4"
             />
           </div>
         </div>
       </div>
-      <div className="hero-diagonal" />
+      <div
+        className="hidden lg:block absolute right-0 bottom-0 w-[30%] h-[220px] bg-white z-20"
+        style={{ clipPath: 'polygon(100% 0, 100% 100%, 0 100%)' }}
+      />
     </section>
   );
 }
