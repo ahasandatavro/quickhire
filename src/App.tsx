@@ -1,6 +1,7 @@
 import Hero from './components/Hero'
 import Companies from './components/Companies'
 import Categories from './components/Categories'
+import Banner from './components/Banner'
 import './App.css'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Hero />
       <Companies />
       <Categories />
+      <Banner />
     </div>
   )
 }
