@@ -134,10 +134,10 @@ function JobRow({ job }: { job: MiniJob }) {
           {job.logoText}
         </div>
         <div className="min-w-0">
-          <h3 className="font-clash text-[26px] font-semibold leading-[120%] text-[#25324B]">
+          <h3 className="font-epilogue text-[20px] font-semibold leading-[120%] text-[#25324B]">
             {job.title}
           </h3>
-          <p className="mt-1 font-epilogue text-[17px] leading-[150%] text-[#7C8493]">
+          <p className="mt-1 font-epilogue text-[16px] leading-[150%] text-[#7C8493]">
             {job.company} <span className="mx-1">•</span> {job.location}
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
